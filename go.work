@@ -1,0 +1,8 @@
+go 1.20
+
+use (
+	./com.baize.go/studygo/day01/02var
+	./com.baize.go/studygo/day01/04int
+	./com.baize.go/studygo/day01/05byte_rune
+	./com.baize.go/studygo/day01/helloword
+)
