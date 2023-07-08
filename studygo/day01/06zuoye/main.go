@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"unicode"
+)
 
 //1. 编写代码分别定义一个整型、浮点型、布尔型、字符串型变量，使用fmt.Printf()搭配%T分别打印出上述变量的值和类型。
 
@@ -19,10 +22,18 @@ func zuoye01() {
 
 // 2. 编写代码统计出字符串"hello沙河小王子"中汉字的数量。
 func zuoye02() {
-
+	varchnString := "hello沙河小王子"
+	chnNum := 0
+	for _, c := range varchnString {
+		if unicode.Is(unicode.Han, c) {
+			chnNum++
+		}
+	}
+	fmt.Printf("字符串 %v 中有 %v 个汉字", varchnString, chnNum)
 }
 
 func main() {
 	zuoye01()
-
+	fmt.Println("=======================")
+	zuoye02()
 }
